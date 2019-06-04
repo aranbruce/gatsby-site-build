@@ -25,6 +25,7 @@ module.exports = {
           include: '/images/' 
         }
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ]
 }
