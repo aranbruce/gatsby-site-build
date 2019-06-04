@@ -1,10 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Link} from 'gatsby'
 import Logo from '../images/logo.svg'
-import classnames from "classnames";
 
-
-export default class Header extends Component {
+class Header extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -12,7 +10,7 @@ export default class Header extends Component {
             burgerOpen: false
           };
     }
-    toggleBurgerMenu(e){
+    toggleBurgerMenu(burger){
         this.setState({burgerOpen: !this.state.burgerOpen});
      }
     handleScroll = () => {
@@ -34,9 +32,7 @@ export default class Header extends Component {
     render() {
         return (
             <nav
-                className={classnames('', {
-                'nav--scroll': this.state.scrolled
-                })}
+                className={this.state.scrolled ? 'nav--scroll' :''}
             >
                 <div className='nav__content'>
                     <div className='nav__left'>
@@ -46,13 +42,12 @@ export default class Header extends Component {
                     </div>
                     <div className='nav__right'>
                         <div
-                            className={classnames('burger-container',
-                                {
-                                    'burger-container--scroll': this.state.scrolled
-                                } ||
-                                'burger-container', this.state.burgerOpen ? 'burger-container--close' : ''
-                              )}
-                              onClick={e => this.toggleBurgerMenu(e)}
+                            className={ 
+                                !this.state.burgerOpen && !this.state.scrolled ? 'burger-container' :
+                                this.state.burgerOpen ? 'burger-container burger-container--close' :
+                                !this.state.burgerOpen && this.state.scrolled ? 'burger-container burger-container--scroll':''
+                            }
+                              onClick={burger => this.toggleBurgerMenu(burger)}
                         >
                             <div className='allBars'>
                                 <div className='bar1'></div>
@@ -60,11 +55,7 @@ export default class Header extends Component {
                                 <div className='bar3'></div>
                             </div>
                         </div>
-                        <div
-                            className={classnames('menu',
-                                this.state.burgerOpen ? 'show' : ''
-                            )}
-                        >
+                        <div className={this.state.burgerOpen ? 'show menu' : 'menu'}>
                             <Link to='/#work' className='nav__item'onClick={e => this.toggleBurgerMenu(e)}>Work</Link>
                             <Link to='/#skills'className='nav__item'onClick={e => this.toggleBurgerMenu(e)}>Skills</Link>
                             <Link to='/#about-me' className='nav__item'onClick={e => this.toggleBurgerMenu(e)}>About Me</Link>
@@ -79,3 +70,5 @@ export default class Header extends Component {
         )
     }
 }
+
+export default Header
