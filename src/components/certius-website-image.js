@@ -1,11 +1,11 @@
 import React from "react"
 
-import WebsiteMobileImage from "../images/citysnapp-website--mobile.svg"
-import WebsiteLaptopImage from "../images/citysnapp-website--laptop.png"
+import WebsiteMobileImage from "../images/certius-website--mobile.png"
+import WebsiteLaptopImage from "../images/certius-website--laptop.png"
 
-const CitySnappWebsiteImage = () => {
+const CertiusWebsiteImage = () => {
   return (
-    <section className="section--light-peach">
+    <section className="section--light-blue">
       <div className="section__content no-padding-bottom no-padding-top">
         <div className="project-image--mobile">
           <img src={WebsiteMobileImage} alt="Website on Mobile" />
@@ -18,4 +18,4 @@ const CitySnappWebsiteImage = () => {
   )
 }
 
-export default CitySnappWebsiteImage
+export default CertiusWebsiteImage
