@@ -4,7 +4,11 @@ import Layout from "../layouts/layout"
 
 const ThankYouPage = () => {
   return (
-    <Layout>
+    <Layout
+      pageTitle="Thank You"
+      pageDescription="Thank you for signing up, we\'ll be in touch shortly."
+      pageURL="https://www.aranbc.com/thank-you"
+    >
       <section className="section--thank-you">
         <div className="section__content-vertical-center">
           <h1 className="extra-margin-bottom">Thank You</h1>

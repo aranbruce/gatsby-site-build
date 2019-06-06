@@ -10,7 +10,11 @@ import DynamoCrmImage from "../components/dynamo-crm-image"
 const DynamoPage = () => {
   return (
     <div>
-      <Layout>
+      <Layout
+        pageTitle="Work | Dynamo"
+        pageDescription="Work done for Dynamo - Website, Web App, and CRM."
+        pageURL="https://www.aranbc.com/dynamo"
+      >
         <DynamoHero />
         <DynamoWebsite />
         <DynamoWebapp />

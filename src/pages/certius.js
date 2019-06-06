@@ -9,7 +9,11 @@ import CertiusWebsiteImage from "../components/certius-website-image"
 
 const CeritusPage = () => {
   return (
-    <Layout>
+    <Layout
+      pageTitle="Work | Certius"
+      pageDescription="Work done for Certius - Market Research, Competitor Analysis, and Website Design"
+      pageURL="https://www.aranbc.com/certius"
+    >
       <CertiusHero />
       <CertiusAudiencesImage />
       <CertiusSiteStructure />

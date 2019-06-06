@@ -9,7 +9,11 @@ import GetInTouchSection from "../components/get-in-touch"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout
+      pageTitle="Aran Bruce-Caddick"
+      pageDescription="Crafting Stunning Digital Experiences. Specialising in developing and executing creative projects across digital mediums."
+      pageURL="https://www.aranbc.com"
+    >
       <HomeHero />
       <WorkSection />
       <SkillsSection />

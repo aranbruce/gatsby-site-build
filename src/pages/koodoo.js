@@ -7,7 +7,11 @@ import KoodooApi from "../components/koodoo-api"
 
 const KoodooPage = () => {
   return (
-    <Layout>
+    <Layout
+      pageTitle="Work | Koodoo"
+      pageDescription="Work done for Koodoo - Website, API Suite."
+      pageURL="https://www.aranbc.com/koodoo"
+    >
       <KoodooHero />
       <KoodooWebsiteImage />
       <KoodooApi />

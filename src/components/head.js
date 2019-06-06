@@ -1,34 +1,33 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-const Head = () => {
+const Head = props => {
   return (
-    <Helmet>
+    <Helmet
+      pageTitle={props.pageTitle}
+      pageDescription={props.pageDescription}
+      pageURL={props.pageURL}
+    >
       {/* <!-- Primary Meta Tags --> */}
-      <title>Aran Bruce-Caddick</title>
-      <meta name="title" content="Aran Bruce-Caddick" />
-      <meta
-        name="description"
-        content="Crafting Stunning Digital Experiences. Specialising in developing and executing creative projects across digital mediums."
-      />
+      <title>{props.pageTitle}</title>
+      <meta name="title" content={props.pageTitle} />
+      <meta name="description" content={props.pageDescription} />
+      <link rel="canonical" href={props.pageURL} />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://aranbc.com/" />
-      <meta property="og:title" content="Aran" />
-      <meta
-        property="og:description"
-        content="This website is so awesome that I really don't think you can handle how much awesome that is happening here."
-      />
+      <meta property="og:url" content={props.pageURL} />
+      <meta property="og:title" content={props.pageTitle} />
+      <meta property="og:description" content={props.pageDescription} />
       {/* <meta property="og:image" content="http://myawesomewebsite.com/facebookimage.png" /> */}
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
       {/* <meta property="twitter:url" content="http://myawesomewebsite.com/"> */}
-      <meta property="twitter:title" content="My Awesome Website" />
+      <meta property="twitter:title" content={props.pageTitle} />
+      <meta property="twitter:description" content={props.pageDescription} />
       <meta
-        property="twitter:description"
-        content="This website is so awesome that I really don't think you can handle how much awesome that is happening here."
+        property="twitter:image"
+        // content="http://myawesomewebsite.com/twitterimage.png"
       />
-      {/* <meta property="twitter:image" content="http://myawesomewebsite.com/twitterimage.png" /> */}
     </Helmet>
   )
 }

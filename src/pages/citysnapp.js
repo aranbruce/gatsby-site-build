@@ -8,7 +8,11 @@ import CitySnappWebsiteImage from "../components/citysnapp-website-image"
 const CitySnappPage = () => {
   return (
     <div>
-      <Layout>
+      <Layout
+        pageTitle="Work | CitySnapp"
+        pageDescription="Work done for CitySnapp - Native and Web Application, and Marketing Website."
+        pageURL="https://www.aranbc.com/citysnapp"
+      >
         <CitySnappHero />
         <CitySnappWebappImage />
         <CitySnappWebsite />

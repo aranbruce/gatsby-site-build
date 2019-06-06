@@ -9,7 +9,11 @@ import Footer from "../components/footer"
 const Layout = props => {
   return (
     <div>
-      <Head />
+      <Head
+        pageTitle={props.pageTitle}
+        pageDescription={props.pageDescription}
+        pageURL={props.pageURL}
+      />
       <Header />
       {props.children}
       <Footer />
