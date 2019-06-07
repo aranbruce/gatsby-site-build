@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Logo from "../images/logo--black.svg"
-import LinkedIn from "../images/linkedIn.svg"
-import Github from "../images/github.svg"
-import Share from "../images/share.svg"
+import LinkedIn from "../images/linkedIn.inline.svg"
+import Github from "../images/github.inline.svg"
+import Share from "../images/share.inline.svg"
 
 const Footer = () => {
   return (
@@ -19,14 +19,14 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={LinkedIn} alt="LinkedIn Icon" />
+              <LinkedIn alt="LinkedIn Icon" />
             </a>
             <a
               href="https://www.github.com/aranbruce"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Github} alt="Github Icon" />
+              <Github alt="Github Icon" />
             </a>
             <a
               href="/"
@@ -34,7 +34,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               id={"share-icon"}
             >
-              <img src={Share} alt="Share Icon" />
+              <Share alt="Share Icon" />
             </a>
           </div>
         </div>
