@@ -5,12 +5,18 @@ import Layout from "../layouts/layout"
 import ErrorMobileImage from "../images/404-image--mobile.svg"
 import ErrorLaptopImage from "../images/404-image--laptop.svg"
 
+const pageMetaData = {
+  title: "404",
+  description: "This Page cannot be found",
+  URL: "https://www.aranbc.com/404",
+}
+
 const ErrorPage = () => {
   return (
     <Layout
-      pageTitle="404"
-      pageDescription="This Page cannot be found"
-      pageURL="https://www.aranbc.com/404"
+      pageTitle={pageMetaData.title}
+      pageDescription={pageMetaData.description}
+      pageURL={pageMetaData.URL}
     >
       <section className="section--404">
         <div className="section__content-vertical-center">
