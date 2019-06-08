@@ -2,7 +2,7 @@ import React from "react"
 
 import AboutMeImage from "../images/about-me.svg"
 
-const AboutMeSection = () => {
+const AboutMe = () => {
   return (
     <section className="section--grey" id={"about-me"}>
       <div className="section__content flex">
@@ -29,4 +29,4 @@ const AboutMeSection = () => {
   )
 }
 
-export default AboutMeSection
+export default AboutMe

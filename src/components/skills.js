@@ -4,7 +4,7 @@ import DataDrivenImage from "../images/data-driven.svg"
 import DeliveryImage from "../images/delivery.svg"
 import DevelopmentFrameworksImage from "../images/development-frameworks.svg"
 
-const SkillsSection = () => {
+const Skills = () => {
   return (
     <section id={"skills"}>
       <div className="section__content no-padding-bottom">
@@ -58,4 +58,4 @@ const SkillsSection = () => {
   )
 }
 
-export default SkillsSection
+export default Skills
