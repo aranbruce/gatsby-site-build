@@ -1,9 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "aranbc",
+  "description": "AranBC Personal Website",
   "version": "0.1.0",
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "env-cmd -f .env.development  gatsby develop",
@@ -12,6 +10,24 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aranbruce/gatsby-site-build"
+  },
+  "author": "Aran Bruce-Caddick",
+  "bugs": {
+    "url": "https://github.com/aranbruce/gatsby-site-build/issues"
+  },
+
+  "lighthouse": {
+    "requiredScores": {
+      "performance": 95,
+      "accessibility": 90,
+      "best-practices": 80,
+      "seo": 90
+    }
+  },
+
   "dependencies": {
     "gatsby": "^2.8.6",
     "gatsby-plugin-favicon": "^3.1.6",
