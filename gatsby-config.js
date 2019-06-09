@@ -60,5 +60,11 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 1000,
+      },
+    },
   ],
 }
