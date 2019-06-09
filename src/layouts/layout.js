@@ -1,5 +1,4 @@
 import React from "react"
-import PageTransition from "gatsby-plugin-page-transitions"
 
 import "../styles/styles.sass"
 
@@ -16,7 +15,7 @@ const Layout = props => {
         pageURL={props.pageURL}
       />
       <Header />
-      <PageTransition>{props.children}</PageTransition>
+      {props.children}
       <Footer />
     </div>
   )

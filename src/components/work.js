@@ -11,24 +11,28 @@ const workItems = [
     title: "Dynamo",
     link: "/dynamo",
     image: DynamoImage,
+    imageAlt: "Dynamo",
   },
   {
     id: 2,
     title: "CitySnapp",
     link: "/citysnapp",
     image: CitySnappImage,
+    imageAlt: "CitySnapp",
   },
   {
     id: 3,
     title: "Koodoo",
     link: "/koodoo",
     image: KoodooImage,
+    imageAlt: "Koodoo",
   },
   {
     id: 4,
     title: "Certius",
     link: "/certius",
     image: CertiusImage,
+    imageAlt: "Certius",
   },
 ]
 
@@ -50,6 +54,7 @@ const Work = () => {
               worktitle={workitem.title}
               worklink={workitem.link}
               workimage={workitem.image}
+              workimagealt={workitem.imageAlt}
             />
           )
         })}
