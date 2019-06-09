@@ -5,7 +5,7 @@ module.exports = {
     author: "@aranbruce",
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -26,6 +26,14 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-transformer-remark",
   ],
 }

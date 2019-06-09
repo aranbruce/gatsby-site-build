@@ -20,7 +20,7 @@ const pageMetaData = {
 const WorkHeroProps = {
   class: "section--work",
   heroTitle: "Dynamo",
-  heroSubtitle: "Get Mortgages",
+  heroSubtitle: "Get Mortgage Power",
   context:
     "Developed in partnership with Blenheim Chalcot (the UK’s leading venture builder) and Countrywide (the UK’s largest mortgage broker), Dynamo is a brand new way to sort your mortgage digitally. With the firmly held belief that everyone deserves to get the best deal on their mortgage, Dynamo is on a mission to help people get expert mortgage advice, for free.",
   keyDeliverables: [
