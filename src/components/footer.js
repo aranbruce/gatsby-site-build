@@ -10,8 +10,7 @@ class Footer extends Component {
   constructor() {
     super()
     this.state = {
-      isShareable: true,
-      showShareIcon: false,
+      showShareIcon: true,
     }
   }
   share(icon) {
@@ -39,8 +38,12 @@ class Footer extends Component {
     } else if (navigator.share) {
       this.setState({ showShareIcon: true })
     } else {
-      console.log("ah")
+      console.log("exception")
     }
+  }
+
+  componentDidMount() {
+    this.setShareIconState()
   }
 
   render() {
@@ -68,7 +71,7 @@ class Footer extends Component {
               <a
                 href="/"
                 onClick={icon => this.share(icon)}
-                // className={this.state.showShareIcon ? "" : "hide"}
+                className={this.state.showShareIcon ? "foo" : "hide"}
                 alt="Share Icon"
               >
                 <Share alt="Share Icon" />
