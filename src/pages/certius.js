@@ -15,7 +15,7 @@ const pageMetaData = {
   title: "Work - Certius",
   description:
     "Work done for Certius - Market Research, Competitor Analysis, and Website Design",
-  URL: "https://www.aranbc.com/certius",
+  URL: "https://www.aranbc.com/certius/",
 }
 
 const WorkHeroProps = {

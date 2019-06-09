@@ -3,6 +3,7 @@ module.exports = {
     title: "Aran Bruce-Caddick",
     description: "Aran Bruce-Caddick's Personal Website",
     author: "@aranbruce",
+    siteUrl: "https://www.aranbc.com",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -58,5 +59,6 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
+    "gatsby-plugin-sitemap",
   ],
 }

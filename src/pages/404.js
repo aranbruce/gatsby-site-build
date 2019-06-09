@@ -8,7 +8,7 @@ import ErrorLaptopImage from "../images/404-image--laptop.svg"
 const pageMetaData = {
   title: "404",
   description: "This Page cannot be found",
-  URL: "https://www.aranbc.com/404",
+  URL: "https://www.aranbc.com/404/",
 }
 
 const ErrorPage = () => {

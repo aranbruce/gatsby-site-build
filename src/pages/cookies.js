@@ -4,7 +4,7 @@ import Layout from "../layouts/layout"
 const pageMetaData = {
   title: "Cookies",
   description: "Page describing the site's cookie policy",
-  URL: "https://www.aranbc.com/cookies",
+  URL: "https://www.aranbc.com/cookies/",
 }
 
 const CookiesPage = () => {

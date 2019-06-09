@@ -11,7 +11,7 @@ import WebsiteLaptopImage from "../images/koodoo-website--laptop.svg"
 const pageMetaData = {
   title: "Work - Koodoo",
   description: "Work done for Koodoo - Website, API Suite",
-  URL: "https://www.aranbc.com/koodoo",
+  URL: "https://www.aranbc.com/koodoo/",
 }
 
 const WorkHeroProps = {

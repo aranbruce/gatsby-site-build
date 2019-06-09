@@ -13,7 +13,7 @@ const pageMetaData = {
   title: "Work - CitySnapp",
   description:
     "Work done for CitySnapp - Native and Web Application, and Marketing Website",
-  URL: "https://www.aranbc.com/citysnapp",
+  URL: "https://www.aranbc.com/citysnapp/",
 }
 
 const WorkHeroProps = {

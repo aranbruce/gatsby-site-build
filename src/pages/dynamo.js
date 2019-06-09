@@ -14,7 +14,7 @@ import CrmLaptopImage from "../images/crm--laptop.svg"
 const pageMetaData = {
   title: "Work - Dynamo",
   description: "Work done for Dynamo - Website, Web App, and CRM",
-  URL: "https://www.aranbc.com/dynamo",
+  URL: "https://www.aranbc.com/dynamo/",
 }
 
 const WorkHeroProps = {

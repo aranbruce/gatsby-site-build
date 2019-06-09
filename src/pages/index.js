@@ -11,7 +11,7 @@ const pageMetaData = {
   title: "Aran Bruce-Caddick",
   description:
     "Crafting Stunning Digital Experiences. Specialising in developing and executing creative projects across digital mediums.",
-  URL: "https://www.aranbc.com",
+  URL: "https://www.aranbc.com/",
 }
 
 const IndexPage = () => {

@@ -5,7 +5,7 @@ import Layout from "../layouts/layout"
 const pageMetaData = {
   title: "Thank You",
   description: "Thank you for signing up, we'll be in touch shortly.",
-  URL: "https://www.aranbc.com/thank-you",
+  URL: "https://www.aranbc.com/thank-you/",
 }
 
 const ThankYouPage = () => {
