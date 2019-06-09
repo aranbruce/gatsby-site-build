@@ -1,8 +1,12 @@
 import React from "react"
-import WorkHero from "../components/work-hero"
 import Layout from "../layouts/layout"
-import KoodooWebsiteImage from "../components/koodoo-website-image"
-import KoodooApi from "../components/koodoo-api"
+
+import WorkHero from "../components/work-hero"
+import WorkImage from "../components/work-image"
+import WorkText from "../components/work-text"
+
+import WebsiteMobileImage from "../images/koodoo-website--mobile.svg"
+import WebsiteLaptopImage from "../images/koodoo-website--laptop.svg"
 
 const pageMetaData = {
   title: "Work - Koodoo",
@@ -10,11 +14,8 @@ const pageMetaData = {
   URL: "https://www.aranbc.com/koodoo",
 }
 
-const sectionStyle = {
+const WorkHeroProps = {
   class: "section--work-orange",
-}
-
-const WorkHeroText = {
   heroTitle: "Koodoo",
   heroSubtitle: "Powering the future of mortgages",
   context:
@@ -29,9 +30,37 @@ const WorkHeroText = {
       text: "API Suite",
     },
   ],
-  firstWorkTitle: "A Marketing Site that Showcases Koodoo’s Offering",
-  firstWorkText:
+  title: "A Marketing Site that Showcases Koodoo’s Offering",
+  text:
     "With the launch of the business, Koodoo needed a marketing website to help position them as a leading authority in the mortgage technology space. The website needed to clearly outline the pain points the business addresses for its customers, as well as explain its various solutions. In addition to conveying an authoritative tone, it was essential that the website present Koodoo as a software solution that is easy to integrate with, as well as an attractive place to work for potential new talent.",
+}
+
+const FirstImages = {
+  class: "section--light-purple",
+  mobileImage: {
+    src: WebsiteMobileImage,
+    alt: "Website on Mobile",
+  },
+  laptopImage: {
+    src: WebsiteLaptopImage,
+    alt: "Website on Laptop",
+  },
+}
+
+const FirstText = {
+  title: "An Elegant API Suite to Deliver Seemless Mortgage Journeys",
+  text: [
+    {
+      id: 1,
+      paragraph:
+        "Working with our customers, Koodoo created a suite of APIs which provide developers with the tools they need to create easy and accessible experiences for their users. Koodoo’s APIs are able to interrogate users’ credit files, and use the data they identify to suggest mortgage products.",
+    },
+    {
+      id: 2,
+      paragraph:
+        "Koodoo’s API-first services also monitor the mortgage market each day, and notify our partners when their users can save by remortgaging. We then send mortgage product data to our partners, enabling them to deliver highly personalised email campaigns to their users.",
+    },
+  ],
 }
 
 const KoodooPage = () => {
@@ -42,16 +71,26 @@ const KoodooPage = () => {
       pageURL={pageMetaData.URL}
     >
       <WorkHero
-        sectionStyle={sectionStyle.class}
-        heroTitle={WorkHeroText.heroTitle}
-        heroSubtitle={WorkHeroText.heroSubtitle}
-        context={WorkHeroText.context}
-        keyDeliverables={WorkHeroText.keyDeliverables}
-        firstWorkTitle={WorkHeroText.firstWorkTitle}
-        firstWorkText={WorkHeroText.firstWorkText}
+        class={WorkHeroProps.class}
+        heroTitle={WorkHeroProps.heroTitle}
+        heroSubtitle={WorkHeroProps.heroSubtitle}
+        context={WorkHeroProps.context}
+        keyDeliverables={WorkHeroProps.keyDeliverables}
+        title={WorkHeroProps.title}
+        text={WorkHeroProps.text}
       />
-      <KoodooWebsiteImage />
-      <KoodooApi />
+      <WorkImage
+        class={FirstImages.class}
+        mobileImageSrc={FirstImages.mobileImage.src}
+        mobileImageAlt={FirstImages.mobileImage.alt}
+        laptopImageSrc={FirstImages.laptopImage.src}
+        laptopImageAlt={FirstImages.laptopImage.alt}
+      />
+      <WorkText
+        title={FirstText.title}
+        id={FirstText.id}
+        text={FirstText.text}
+      />
     </Layout>
   )
 }

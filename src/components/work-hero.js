@@ -2,7 +2,7 @@ import React from "react"
 
 const WorkHero = props => {
   return (
-    <section className={props.sectionStyle}>
+    <section className={props.class}>
       <div className="section__content-full-width">
         <div className="extra-padding-bottom extra-padding-top">
           <h1 className="extra-margin-bottom">{props.heroTitle}</h1>
@@ -29,8 +29,8 @@ const WorkHero = props => {
         </div>
         <div className="flex extra-padding-top">
           <div className="content--extra-large">
-            <h5>{props.firstWorkTitle}</h5>
-            <p>{props.firstWorkText}</p>
+            <h5>{props.title}</h5>
+            <p>{props.text}</p>
           </div>
         </div>
       </div>
