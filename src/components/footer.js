@@ -66,11 +66,9 @@ class Footer extends Component {
                 <Github alt="Github Icon" />
               </a>
               <a
-                href="/#form"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/"
                 onClick={icon => this.share(icon)}
-                className={this.state.showShareIcon ? "" : "hide"}
+                // className={this.state.showShareIcon ? "" : "hide"}
                 alt="Share Icon"
               >
                 <Share alt="Share Icon" />

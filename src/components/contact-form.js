@@ -4,12 +4,19 @@ class ContactForm extends Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      sending: false,
+    }
+  }
+
+  toggleSending(submit) {
+    this.setState({ sending: !this.state.sending })
   }
 
   handleSubmit(event) {
     event.preventDefault()
     const data = new FormData(event.target)
-
+    this.toggleSending()
     fetch(
       "https://script.google.com/macros/s/AKfycbwcGSl46eEqo95KJ5_PpeVrFzLurzwG8IzI5VuQmIhmHzU7gyI/exec",
       {
@@ -59,11 +66,13 @@ class ContactForm extends Component {
           />
           <button
             className="button--primary"
+            disabled={this.state.sending}
             id={"formButton"}
             type="submit"
             value="Send"
+            // onClick={submit => this.toggleSending(submit)}
           >
-            Send
+            {!this.state.sending ? "Send" : "Sending"}
           </button>
         </div>
       </form>
