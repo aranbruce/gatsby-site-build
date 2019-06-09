@@ -7,6 +7,28 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/favicon.png",
+        icons: {
+          android: false,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: false,
+          yandex: false,
+          windows: false,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Aran Bruce-Caddick",
@@ -18,6 +40,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

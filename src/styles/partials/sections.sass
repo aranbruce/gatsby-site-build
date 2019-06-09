@@ -21,6 +21,9 @@ section
 .section--grey
   background-color: $grey
 
+.section--grey-gradient
+  background-image: linear-gradient(#F2F6FD, white)
+
 .section--home
   background-image: url('../images/section__background--home.svg')
   background-repeat: no-repeat
@@ -118,7 +121,13 @@ section
       @media screen and (min-width: $tablet)
         display: none
 
-
+.section--cookies
+  @extend .section--work
+  min-height: 25rem
+  .section__content
+    padding-top: unset
+    padding-bottom: unset
+    width: 100%
 .section__content
   max-width: 75rem
   margin: 0 auto

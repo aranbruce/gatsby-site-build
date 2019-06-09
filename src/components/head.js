@@ -13,21 +13,15 @@ const Head = props => {
       <meta name="title" content={props.pageTitle} />
       <meta name="description" content={props.pageDescription} />
       <link rel="canonical" href={props.pageURL} />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={props.pageURL} />
       <meta property="og:title" content={props.pageTitle} />
       <meta property="og:description" content={props.pageDescription} />
-      {/* <meta property="og:image" content="http://myawesomewebsite.com/facebookimage.png" /> */}
-      {/* <!-- Twitter --> */}
-      <meta property="twitter:card" content="summary_large_image" />
-      {/* <meta property="twitter:url" content="http://myawesomewebsite.com/"> */}
-      <meta property="twitter:title" content={props.pageTitle} />
-      <meta property="twitter:description" content={props.pageDescription} />
-      <meta
-        property="twitter:image"
-        // content="http://myawesomewebsite.com/twitterimage.png"
-      />
+      <meta name="apple-mobile-web-app-title" content="Aran Bruce-Caddick" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     </Helmet>
   )
 }
