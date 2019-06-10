@@ -41,7 +41,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -72,5 +71,6 @@ module.exports = {
         respectDNT: false,
       },
     },
+    "gatsby-plugin-offline",
   ],
 }
