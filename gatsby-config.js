@@ -60,5 +60,17 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sitemap",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-113169728-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: false,
+      },
+    },
   ],
 }

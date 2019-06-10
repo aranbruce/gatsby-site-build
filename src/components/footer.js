@@ -34,7 +34,6 @@ class Footer extends Component {
   setShareIconState() {
     if (!navigator.share) {
       this.setState({ showShareIcon: false })
-      console.log("not shareable")
     } else if (navigator.share) {
       this.setState({ showShareIcon: true })
     } else {
