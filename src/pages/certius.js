@@ -16,6 +16,7 @@ const pageMetaData = {
   description:
     "Work done for Certius - Market Research, Competitor Analysis, and Website Design",
   URL: "https://www.aranbc.com/certius/",
+  location: "/certius/",
 }
 
 const WorkHeroProps = {
@@ -118,7 +119,7 @@ const CeritusPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
-      location={pageMetaData.title.split("/")}
+      location={pageMetaData.location}
     >
       <WorkHero
         class={WorkHeroProps.class}

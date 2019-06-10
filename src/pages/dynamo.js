@@ -15,6 +15,7 @@ const pageMetaData = {
   title: "Work - Dynamo",
   description: "Work done for Dynamo - Website, Web App, and CRM",
   URL: "https://www.aranbc.com/dynamo/",
+  location: "/dynamo/",
 }
 
 const WorkHeroProps = {
@@ -127,7 +128,7 @@ const DynamoPage = () => {
         pageTitle={pageMetaData.title}
         pageDescription={pageMetaData.description}
         pageURL={pageMetaData.URL}
-        location={pageMetaData.title.split("/")}
+        location={pageMetaData.location}
       >
         <WorkHero
           class={WorkHeroProps.class}

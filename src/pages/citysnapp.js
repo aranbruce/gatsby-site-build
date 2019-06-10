@@ -14,6 +14,7 @@ const pageMetaData = {
   description:
     "Work done for CitySnapp - Native and Web Application, and Marketing Website",
   URL: "https://www.aranbc.com/citysnapp/",
+  location: "/citysnapp/",
 }
 
 const WorkHeroProps = {
@@ -84,7 +85,7 @@ const CitySnappPage = () => {
         pageTitle={pageMetaData.title}
         pageDescription={pageMetaData.description}
         pageURL={pageMetaData.URL}
-        location={pageMetaData.title.split("/")}
+        location={pageMetaData.location}
       >
         <WorkHero
           class={WorkHeroProps.class}
