@@ -71,6 +71,12 @@ module.exports = {
         respectDNT: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/layout`),
+      },
+    },
     "gatsby-plugin-offline",
   ],
 }

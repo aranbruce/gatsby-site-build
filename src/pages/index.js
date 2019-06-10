@@ -20,6 +20,7 @@ const IndexPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
+      location={pageMetaData.title.split("/")}
     >
       <HomeHero />
       <WorkSection />

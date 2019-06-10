@@ -14,6 +14,7 @@ const CookiesPage = () => {
         pageTitle={pageMetaData.title}
         pageDescription={pageMetaData.description}
         pageURL={pageMetaData.URL}
+        location={pageMetaData.title.split("/")}
       >
         <section className="section--cookies">
           <div className="section__content">

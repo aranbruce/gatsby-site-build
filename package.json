@@ -31,6 +31,7 @@
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-analytics": "^2.0.21",
     "gatsby-plugin-html-attributes": "^1.0.5",
+    "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -44,6 +45,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-svg": "^10.0.6",
+    "react-transition-group": "^4.1.1",
     "smooth-scroll": "^16.0.3"
   },
   "devDependencies": {

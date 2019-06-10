@@ -69,6 +69,7 @@ const KoodooPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
+      location={pageMetaData.title.split("/")}
     >
       <WorkHero
         class={WorkHeroProps.class}

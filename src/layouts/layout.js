@@ -1,25 +1,31 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-import "../styles/styles.sass"
-
+import Transition from "../components/transition"
 import Head from "../components/head"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-const Layout = props => {
+import "../styles/styles.sass"
+
+const Layout = ({ children, location }) => {
   return (
     <div>
       <Head
-        pageTitle={props.pageTitle}
-        pageDescription={props.pageDescription}
-        pageURL={props.pageURL}
+        pageTitle={children.pageTitle}
+        pageDescription={children.pageDescription}
+        pageURL={children.pageURL}
       />
       <Header />
-      {props.children}
+      <Transition location={location}>{children}</Transition>
       <Footer />
     </div>
   )
 }
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
   require("smooth-scroll")('a[href*="#"]', {

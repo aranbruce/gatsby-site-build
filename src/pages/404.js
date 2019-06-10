@@ -17,6 +17,7 @@ const ErrorPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
+      location={pageMetaData.title.split("/")}
     >
       <section className="section--404">
         <div className="section__content-vertical-center">
