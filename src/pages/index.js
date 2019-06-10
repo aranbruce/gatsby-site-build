@@ -12,7 +12,6 @@ const pageMetaData = {
   description:
     "Crafting Stunning Digital Experiences. Specialising in developing and executing creative projects across digital mediums.",
   URL: "https://www.aranbc.com/",
-  location: "/",
 }
 
 const IndexPage = () => {
@@ -21,7 +20,6 @@ const IndexPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
-      location={pageMetaData.location}
     >
       <HomeHero />
       <WorkSection />

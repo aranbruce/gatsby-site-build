@@ -14,7 +14,6 @@ const ThankYouPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
-      location={pageMetaData.URL.split("/")[1]}
     >
       <section className="section--thank-you">
         <div className="section__content-vertical-center">

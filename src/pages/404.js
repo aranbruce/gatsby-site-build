@@ -9,7 +9,6 @@ const pageMetaData = {
   title: "404",
   description: "This Page cannot be found",
   URL: "https://www.aranbc.com/404/",
-  location: "/404/",
 }
 
 const ErrorPage = () => {
@@ -18,7 +17,6 @@ const ErrorPage = () => {
       pageTitle={pageMetaData.title}
       pageDescription={pageMetaData.description}
       pageURL={pageMetaData.URL}
-      location={pageMetaData.location}
     >
       <section className="section--404">
         <div className="section__content-vertical-center">

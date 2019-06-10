@@ -5,7 +5,6 @@ const pageMetaData = {
   title: "Cookies",
   description: "Page describing the site's cookie policy",
   URL: "https://www.aranbc.com/cookies/",
-  location: "/cookies/",
 }
 
 const CookiesPage = () => {
@@ -15,7 +14,6 @@ const CookiesPage = () => {
         pageTitle={pageMetaData.title}
         pageDescription={pageMetaData.description}
         pageURL={pageMetaData.URL}
-        location={pageMetaData.location}
       >
         <section className="section--cookies">
           <div className="section__content">

@@ -1,7 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-
-import Transition from "../components/transition"
 
 import Head from "../components/head"
 import Header from "../components/header"
@@ -18,13 +15,10 @@ const Layout = props => {
         pageURL={props.pageURL}
       />
       <Header />
-      <Transition location={props.location}>{props.children}</Transition>
+      {props.children}
       <Footer />
     </div>
   )
-}
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 if (typeof window !== "undefined") {
