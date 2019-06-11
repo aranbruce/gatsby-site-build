@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: "gatsby-plugin-favicon",
       options: {
         logo: "./src/images/favicon.png",
         icons: {
@@ -46,7 +46,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-113169728-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
