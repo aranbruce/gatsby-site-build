@@ -6,16 +6,16 @@ import Footer from "../components/footer"
 
 import "../styles/styles.sass"
 
-const Layout = props => {
+const Layout = ({ pageTitle, pageDescription, pageURL, children }) => {
   return (
     <div>
       <Head
-        pageTitle={props.pageTitle}
-        pageDescription={props.pageDescription}
-        pageURL={props.pageURL}
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        pageURL={pageURL}
       />
       <Header />
-      {props.children}
+      {children}
       <Footer />
     </div>
   )

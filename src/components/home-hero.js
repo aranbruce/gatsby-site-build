@@ -2,7 +2,7 @@ import React from "react"
 
 import HeaderImage from "../images/header--home-image.svg"
 
-const HomeHero = props => {
+const HomeHero = () => {
   return (
     <section className="section--home">
       <div className="section__content-vertical-center flex">
