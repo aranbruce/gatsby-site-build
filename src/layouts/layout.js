@@ -1,4 +1,5 @@
-import React from "react"
+import React, { Component } from "react"
+import posed, { PoseGroup } from "react-pose"
 
 import Head from "../components/head"
 import Header from "../components/header"
@@ -6,19 +7,48 @@ import Footer from "../components/footer"
 
 import "../styles/styles.sass"
 
-const Layout = ({ pageTitle, pageDescription, pageURL, children }) => {
-  return (
-    <div>
-      <Head
-        pageTitle={pageTitle}
-        pageDescription={pageDescription}
-        pageURL={pageURL}
-      />
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  )
+const FadeContent = posed.div({
+  enter: { opacity: 1, transition: { duration: 500 } },
+  exit: { opacity: 0, transition: { duration: 500 } },
+})
+
+class Layout extends Component {
+  state = { isVisible: false }
+
+  componentDidMount() {
+    this.setState({
+      isVisible: true,
+    })
+  }
+  componentWillUnmount() {
+    this.setState({
+      isVisible: false,
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Head
+          pageTitle={this.props.pageTitle}
+          pageDescription={this.props.pageDescription}
+          pageURL={this.props.pageURL}
+        />
+        <Header />
+        <PoseGroup>
+          {this.state.isVisible && [
+            <FadeContent
+              pose={this.state.isVisible ? "visible" : "hidden"}
+              key="FadeContent"
+            >
+              {this.props.children}
+            </FadeContent>,
+          ]}
+        </PoseGroup>
+        <Footer />
+      </div>
+    )
+  }
 }
 
 if (typeof window !== "undefined") {
