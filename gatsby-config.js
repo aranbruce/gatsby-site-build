@@ -8,12 +8,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-html-attributes",
-      options: {
-        lang: "en",
-      },
-    },
-    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/images/favicon.png",

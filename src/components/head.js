@@ -8,6 +8,7 @@ const Head = props => {
       pageDescription={props.pageDescription}
       pageURL={props.pageURL}
     >
+      <html lang="en" />
       {/* <!-- Primary Meta Tags --> */}
       <title>{props.pageTitle}</title>
       <meta name="title" content={props.pageTitle} />
