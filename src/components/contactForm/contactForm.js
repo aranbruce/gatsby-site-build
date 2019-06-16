@@ -1,5 +1,8 @@
 import React, { Component } from "react"
 
+import styles from "./contactForm.module.sass"
+import Button from "../button/button"
+
 class ContactForm extends Component {
   constructor() {
     super()
@@ -35,9 +38,10 @@ class ContactForm extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="form__wrapper">
+      <form className={styles.form} onSubmit={this.handleSubmit}>
+        <div className={styles.formWrapper}>
           <input
+            className={styles.input}
             type="text"
             name="NAME"
             aria-label="Name"
@@ -45,6 +49,7 @@ class ContactForm extends Component {
             required
           />
           <input
+            className={styles.input}
             type="email"
             name="EMAIL"
             aria-label="Email"
@@ -52,6 +57,7 @@ class ContactForm extends Component {
             required
           />
           <input
+            className={styles.input}
             type="text"
             name="SUBJECT"
             aria-label="Subject"
@@ -59,21 +65,22 @@ class ContactForm extends Component {
             required
           />
           <textarea
+            className={styles.textarea}
             name="MESSAGE"
             placeholder="Message"
             aria-label="Message"
             required
           />
-          <button
-            className="button--primary"
-            disabled={this.state.sending}
-            id={"formButton"}
+          <Button
+            form
+            buttonType="primary"
             type="submit"
             value="Send"
-            // onClick={submit => this.toggleSending(submit)}
+            disabled={this.state.sending}
+            id={"formButton"}
           >
             {!this.state.sending ? "Send" : "Sending"}
-          </button>
+          </Button>
         </div>
       </form>
     )

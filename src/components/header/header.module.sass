@@ -1,0 +1,148 @@
+@import "../../styles/partials/vars.sass"
+
+.nav
+    position: fixed
+    top: 0
+    left: 0
+    height: 4.0625rem
+    z-index: 1
+    width: 100%
+    transition: all .2s ease-in-out
+
+.navContent
+    max-width: 75rem
+    height: 100%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    padding: 0 2rem
+    @media screen and (min-width: $mobile-large)
+        padding: 0 4rem
+    @media screen and (min-width: $tablet)
+        padding: 0 5rem
+
+.navLeft
+    align-self: center
+    z-index: 2
+    min-width: 6rem
+
+.navRight
+    text-align: right
+    width: 35rem
+    align-self: center
+    display: flex
+    justify-content: flex-end
+    link
+        &:hover
+            color: $green
+        &:active
+            color: $white
+
+.menu
+    display: none
+    @media screen and (min-width: $tablet)
+        display: flex
+        align-self: center
+        justify-content: flex-end
+        width: 100%
+.show
+    @extends .menu
+    @media screen and (max-width: $tablet - 1)
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100vh
+        display: flex
+        flex-flow: column
+        text-align: left
+        background: $white
+        padding-top: 5rem
+        display: flex
+        flex-wrap: wrap
+        align-content: space-around
+            
+        a
+            color: $not-black
+            margin: 0
+            justify-content: space-around
+            width: 100%
+            text-align: center
+            padding: 0.5rem
+            margin-top: 10vh
+            &:hover
+                color: $blue
+            &:active
+                color: $not-black
+
+.navItem
+    text-decoration: none
+    color: $white
+    margin-left: 2rem
+    align-self: center
+    @media screen and (min-width: $laptop-small)
+        margin-left: 4rem
+    @media screen and (min-width: $laptop-medium)
+        margin-left: 4.5rem
+    &:first-child
+        margin-left: 0
+    &:hover
+        color: $green
+    &:active
+        color: $white
+
+.navScroll
+    @extend .nav
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(152, 152, 152, 0.1)
+    background: $white
+    
+    .navRight
+        .navItem
+            color: $not-black
+            &:hover
+                color: $blue
+            &:active
+                color: $not-black
+
+.burgerContainer
+    display: flex
+    border-radius: 50%
+    background: $white
+    cursor: pointer
+    width: 2.8125rem
+    height: 2.8125rem
+    box-shadow: 0 5px 5px 0 rgba(43, 43, 43, 0.2)
+    z-index: 2
+    @media screen and (min-width: $tablet)
+        display: none
+    
+.bar1, .bar2, .bar3
+    width: 21px
+    height: 1px
+    background-color: #5798FF
+    margin: auto
+    margin-top: 6px
+    margin-bottom: 6px
+    transition: 0.4s
+.allBars
+    width: 100%
+    align-self: center
+
+.burgerContainerScroll
+    @extend  .burgerContainer
+    background: linear-gradient(319.33deg, $purple 0%, #2CCDFF 100%)
+        
+    .bar1, .bar2, .bar3
+        background-color: $white
+
+.burgerContainerClose
+    @extend .burgerContainer
+    @extend .burgerContainerScroll
+    .bar1
+        -webkit-transform: rotate(-45deg) translate(-5px, 5px)
+        transform: rotate(-45deg) translate(-5px, 5px)
+    .bar2
+        opacity: 0
+    .bar3
+        -webkit-transform: rotate(45deg) translate(-5px, -5px)
+        transform: rotate(45deg) translate(-5px, -5px)

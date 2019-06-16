@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import posed, { PoseGroup } from "react-pose"
 
-import Head from "../components/head"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import Head from "../components/head/head"
+import Header from "../components/header/header"
+import Footer from "../components/footer/footer"
 
 import "../styles/styles.sass"
 

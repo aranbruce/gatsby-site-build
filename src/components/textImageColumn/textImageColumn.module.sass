@@ -1,0 +1,37 @@
+@import "../../styles/partials/vars.sass"
+
+.textImageColumn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap-reverse
+    &:nth-child(4)
+        padding: 10rem 0
+
+.textImageColumnReverse
+    @extend .textImageColumn
+    flex-wrap: wrap
+
+.textImageColumnHero
+    @extend .textImageColumn
+    .text
+        width: 100%
+    .image
+        display: none
+    @media screen and (min-width: $laptop-small)
+        .text
+            width: 50%
+        .image
+            display: inline
+            width: 40%
+.text
+    width: 100%
+    @media screen and (min-width: $tablet)
+        width: 45%
+
+.image
+    width: 100%
+    padding-bottom: 2rem
+    @media screen and (min-width: $tablet)
+        width: 50%
+        padding-bottom: 0

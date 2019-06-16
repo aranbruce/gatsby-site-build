@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import Logo from "../images/logo.svg"
+
+import styles from "./header.module.sass"
+
+import Logo from "./logo.svg"
+import Button from "../button/button"
 
 class Header extends Component {
   constructor() {
@@ -31,61 +35,69 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className={this.state.scrolled ? "nav--scroll" : ""}>
-        <div className="nav__content">
-          <div className="nav__left">
-            <Link className="nav__item" to="/">
+      <nav className={this.state.scrolled ? styles.navScroll : styles.nav}>
+        <div className={styles.navContent}>
+          <div className={styles.navLeft}>
+            <Link className={styles.navItem} to="/">
               <img src={Logo} alt="website logo" />
             </Link>
           </div>
-          <div className="nav__right">
+          <div className={styles.navRight}>
             <div
               className={
                 !this.state.burgerOpen && !this.state.scrolled
-                  ? "burger-container"
+                  ? styles.burgerContainer
                   : this.state.burgerOpen
-                  ? "burger-container burger-container--close"
+                  ? styles.burgerContainerClose
                   : !this.state.burgerOpen && this.state.scrolled
-                  ? "burger-container burger-container--scroll"
+                  ? styles.burgerContainerScroll
                   : ""
               }
               onClick={burger => this.toggleBurgerMenu(burger)}
             >
-              <div className="allBars">
-                <div className="bar1" />
-                <div className="bar2" />
-                <div className="bar3" />
+              <div className={styles.allBars}>
+                <div className={styles.bar1} />
+                <div className={styles.bar2} />
+                <div className={styles.bar3} />
               </div>
             </div>
-            <div className={this.state.burgerOpen ? "show menu" : "menu"}>
+            <div className={this.state.burgerOpen ? styles.show : styles.menu}>
               <Link
                 to="/#work"
-                className="nav__item"
+                className={styles.navItem}
                 onClick={e => this.toggleBurgerMenu(e)}
               >
                 Work
               </Link>
               <Link
                 to="/#skills"
-                className="nav__item"
+                className={styles.navItem}
                 onClick={e => this.toggleBurgerMenu(e)}
               >
                 Skills
               </Link>
               <Link
                 to="/#about-me"
-                className="nav__item"
+                className={styles.navItem}
                 onClick={e => this.toggleBurgerMenu(e)}
               >
                 About Me
               </Link>
-              <Link
-                to="/#form"
-                className="nav__item"
+
+              <Button
+                link="/#form"
+                className={styles.navItem}
                 onClick={e => this.toggleBurgerMenu(e)}
+                buttonType={
+                  this.state.scrolled
+                    ? "primary"
+                    : this.state.burgerOpen
+                    ? "primary"
+                    : "secondary"
+                }
               >
-                <button className="button--secondary">Get In Touch</button>
-              </Link>
+                Get In Touch
+              </Button>
             </div>
           </div>
         </div>

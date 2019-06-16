@@ -1,0 +1,59 @@
+@import "../../styles/partials/vars.sass"
+
+.section
+  height: auto
+  width: 100%
+  margin: 0 auto
+
+.sectionGrey
+  @extend .section
+  background-color: $grey
+
+.sectionGreyGradient
+  background-image: linear-gradient(#F2F6FD, white)
+
+.sectionHero
+  min-height: 100vh
+  display: flex
+  align-items: center
+
+.sectionHeroBlueLarge
+  @extend .sectionHero
+  background-image: url('../../images/section__background--home.svg')
+  background-repeat: no-repeat
+  background-position: 45% 0%
+  @media screen and (min-width: $tablet)
+    background-position: 65% 0%
+  @media screen and (min-width: $laptop-medium)
+    background-position: 100% 0%
+    background-size: cover
+
+.sectionHeroBlueSmall
+  @extend .sectionHero
+  background-image: url('../../images/section__background--blue.svg')
+  background-repeat: no-repeat
+  background-position: 45% 0%
+  @media screen and (min-width: $tablet)
+    background-position: 65% 0%
+  @media screen and (min-width: $laptop-medium)
+    background-position: 100% 0%
+    background-size: cover
+
+.sectionContent
+  max-width: 75rem
+  margin: 0 auto
+  padding: 10rem 2rem
+  width:  calc(100% - 4rem)
+  @media screen and (min-width: $mobile-large)
+    padding: 10rem 4rem
+    width:  calc(100% - 8rem)
+  @media screen and (min-width: $tablet)
+    padding: 10rem 5rem
+    width:  calc(100% - 10rem)
+
+.sectionContentCenter
+  @extend .sectionContent
+  text-align: center
+
+.title
+  margin-bottom: 2rem

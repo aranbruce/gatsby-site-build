@@ -1,0 +1,43 @@
+@import "../../styles/partials/vars.sass"
+
+.image
+    position: relative
+    bottom: -.5rem
+    max-width: 75rem
+    margin: 0 auto
+    padding: 0 2rem
+    width:  calc(100% - 4rem)
+    @media screen and (min-width: $mobile-large)
+        padding: 0 4rem
+        width:  calc(100% - 8rem)
+    @media screen and (min-width: $tablet)
+        padding: 0 5rem
+        width:  calc(100% - 10rem)
+
+.imageMobile
+    @extend .image
+    display: block
+    @media screen and (min-width: $tablet)
+        display: none
+        
+.imageLaptop
+    @extend .image
+    display: none
+    @media screen and (min-width: $tablet)
+        display: block
+        padding-top: 3rem
+
+.aqua
+  background-color: $aqua
+
+.blue
+  background-image: linear-gradient(47deg, rgba(128,103,255,0.4) 0%, rgba(44,205,255,0.4) 41%)
+
+.peach
+  background-image: linear-gradient(45deg, #FE9A8B 0%, #FD868C 37%, #F9748F 77%, #F78CA0 100%)
+
+.purple
+  background-color: $light-purple
+
+.yellow
+  background-color: $light-yellow

@@ -1,4 +1,6 @@
-button
+@import "../../styles/partials/vars.sass"
+
+.button
   height: 3.125rem
   width: auto
   min-width: 7.5rem
@@ -21,17 +23,16 @@ button
   &:active
     box-shadow: 0 1.25rem 1.25rem 0 rgba(43, 43, 43, 0.2)
 
-.button--primary
-  background: $button-gradient
-  color: $white
-  &:hover
-    background: $button-gradient--hover
-  &:active
+.buttonPrimary
+    @extend .button
     background: $button-gradient
+    color: $white
+    &:hover
+        background: $button-gradient--hover
+    &:active
+        background: $button-gradient
 
-
-.button--secondary
-  background-color: $white
-  color: $blue
-
-.button--disabled
+.buttonSecondary
+    @extend .button
+    background-color: $white
+    color: $blue

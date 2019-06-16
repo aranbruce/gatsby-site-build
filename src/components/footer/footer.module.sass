@@ -1,0 +1,71 @@
+@import "../../styles/partials/vars.sass"
+    
+.footer
+  width: 100%
+  height: auto
+  margin: auto
+  background-color: $grey
+  
+.footerContent
+    max-width: 75rem
+    margin: 0 auto
+    padding: 10rem 2rem
+    @media screen and (min-width: $mobile-large)
+        padding: 10rem 4rem
+    @media screen and (min-width: $tablet)
+        padding: 10rem 5rem
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.footerLeft
+    width: 100%
+    margin-bottom: 4rem
+    @media screen and (min-width: $tablet)
+        width: 18rem
+        margin-bottom: 0
+.logoBlack
+    width: 6rem
+    margin-top: 1rem
+.social
+    height: 2rem
+    margin-top: 1rem
+.link
+    display: inline-block
+    height: 2rem
+.link:nth-child(2)
+    margin-left: 0.5rem
+    margin-right: 0.5rem
+.icon
+    width: 2rem
+    fill: $not-black
+    &:hover
+        fill: $blue
+.hide
+    display: none
+          
+.footerRight
+    display: flex
+    flex-wrap: wrap
+      
+.footerSubsection
+    width: 100%
+    &:first-child
+        margin-bottom: 2rem
+    @media screen and (min-width: $mobile-large)
+        width: auto
+        &:first-child
+            margin-right: 3rem
+
+.footerSubsectionTitle
+    font-weight: 600
+    margin-bottom: 1rem
+        
+.footerSubsectionContent
+    ul
+        padding-left: 0
+        margin: 0 auto
+        li
+            margin-bottom: 0.5rem
+            &:last-child
+                margin-bottom: 0

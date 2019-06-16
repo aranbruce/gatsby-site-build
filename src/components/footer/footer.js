@@ -1,10 +1,12 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 
-import Logo from "../images/logo--black.svg"
-import LinkedIn from "../images/linkedIn.inline.svg"
-import Github from "../images/github.inline.svg"
-import Share from "../images/share.inline.svg"
+import styles from "./footer.module.sass"
+
+import Logo from "./logo--black.svg"
+import LinkedIn from "./linkedIn.inline.svg"
+import Github from "./github.inline.svg"
+import Share from "./share.inline.svg"
 
 class Footer extends Component {
   constructor() {
@@ -13,7 +15,7 @@ class Footer extends Component {
       showShareIcon: true,
     }
   }
-  share(icon) {
+  share(shareIcon) {
     if (navigator.share) {
       navigator
         .share({
@@ -47,60 +49,64 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer>
-        <div className="footer__content">
-          <div className="footer__left">
-            <img className="logo--black" src={Logo} alt="website logo" />
-            <h4 className="extra-margin-top">Aran Bruce-Caddick</h4>
-            <div className="social extra-margin-top">
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerLeft}>
+            <img className={styles.logoBlack} src={Logo} alt="website logo" />
+            <h4>Aran Bruce-Caddick</h4>
+            <div className={styles.social}>
               <a
+                className={styles.link}
                 href="https://www.linkedin.com/in/aran-bruce-caddick-a67b6790/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedIn alt="LinkedIn Icon" />
+                <LinkedIn alt="LinkedIn Icon" className={styles.icon} />
               </a>
               <a
+                className={styles.link}
                 href="https://www.github.com/aranbruce"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github alt="Github Icon" />
+                <Github alt="Github Icon" className={styles.icon} />
               </a>
               <a
                 href="/"
-                onClick={icon => this.share(icon)}
-                className={this.state.showShareIcon ? "foo" : "hide"}
+                onClick={shareIcon => this.share(shareIcon)}
+                className={this.state.showShareIcon ? styles.link : styles.hide}
                 alt="Share Icon"
               >
-                <Share alt="Share Icon" />
+                <Share alt="Share Icon" className={styles.icon} />
               </a>
             </div>
           </div>
-          <div className="footer__right">
-            <div className="footer-subsection">
-              <div className="footer-subsection-title extra-margin-bottom">
-                Site
-              </div>
-              <div className="footer-subsection-content">
+          <div className={styles.footerRight}>
+            <div className={styles.footerSubsection}>
+              <div className={styles.footerSubsectionTitle}>Site</div>
+              <div className={styles.footerSubsectionContent}>
                 <ul>
                   <li>
-                    <Link to="/#work">Work</Link>
+                    <Link to="/#work" className={styles.link}>
+                      Work
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/#skills">Skills</Link>
+                    <Link to="/#skills" className={styles.link}>
+                      Skills
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/#form">Get In Touch</Link>
+                    <Link to="/#form" className={styles.link}>
+                      Get In Touch
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="footer-subsection">
-              <div className="footer-subsection-title extra-margin-bottom">
-                Legals
-              </div>
-              <div className="footer-subsection-content">
+            <div className={styles.footerSubsection}>
+              <div className={styles.footerSubsectionTitle}>Legals</div>
+              <div className={styles.footerSubsectionContent}>
                 <ul>
                   <li>
                     <Link to="/cookies">Cookie Policy</Link>
