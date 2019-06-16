@@ -109,7 +109,9 @@ class Footer extends Component {
               <div className={styles.footerSubsectionContent}>
                 <ul>
                   <li>
-                    <Link to="/cookies">Cookie Policy</Link>
+                    <Link to="/cookies" className={styles.link}>
+                      Cookie Policy
+                    </Link>
                   </li>
                 </ul>
               </div>
