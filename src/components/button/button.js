@@ -3,7 +3,15 @@ import { Link } from "@reach/router"
 
 import styles from "./button.module.sass"
 
-const Button = ({ link, className, type, buttonType, children, form }) => {
+const Button = ({
+  link,
+  className,
+  type,
+  onClick,
+  buttonType,
+  children,
+  form,
+}) => {
   return !form ? (
     <Link to={link} className={className}>
       <button
@@ -13,6 +21,7 @@ const Button = ({ link, className, type, buttonType, children, form }) => {
             : styles.buttonSecondary
         }
         type={type}
+        onClick={onClick}
       >
         {children}
       </button>

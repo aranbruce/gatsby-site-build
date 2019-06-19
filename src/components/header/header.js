@@ -65,21 +65,21 @@ class Header extends Component {
               <Link
                 to="/#work"
                 className={styles.navItem}
-                onClick={e => this.toggleBurgerMenu(e)}
+                onClick={burger => this.toggleBurgerMenu(burger)}
               >
                 Work
               </Link>
               <Link
                 to="/#skills"
                 className={styles.navItem}
-                onClick={e => this.toggleBurgerMenu(e)}
+                onClick={burger => this.toggleBurgerMenu(burger)}
               >
                 Skills
               </Link>
               <Link
                 to="/#about-me"
                 className={styles.navItem}
-                onClick={e => this.toggleBurgerMenu(e)}
+                onClick={burger => this.toggleBurgerMenu(burger)}
               >
                 About Me
               </Link>
@@ -87,7 +87,7 @@ class Header extends Component {
               <Button
                 link="/#form"
                 className={styles.navItem}
-                onClick={e => this.toggleBurgerMenu(e)}
+                onClick={burger => this.toggleBurgerMenu(burger)}
                 buttonType={
                   this.state.scrolled
                     ? "primary"
