@@ -14,6 +14,11 @@ class Header extends Component {
       burgerOpen: false,
     }
   }
+
+  closBurgerMenu(burger) {
+    this.setState({ burgerOpen: false })
+  }
+
   toggleBurgerMenu(burger) {
     this.setState({ burgerOpen: !this.state.burgerOpen })
   }
@@ -38,7 +43,11 @@ class Header extends Component {
       <nav className={this.state.scrolled ? styles.navScroll : styles.nav}>
         <div className={styles.navContent}>
           <div className={styles.navLeft}>
-            <Link className={styles.navItem} to="/">
+            <Link
+              className={styles.navItem}
+              to="/"
+              onClick={burger => this.closBurgerMenu(burger)}
+            >
               <img src={Logo} alt="website logo" />
             </Link>
           </div>
@@ -65,21 +74,21 @@ class Header extends Component {
               <Link
                 to="/#work"
                 className={styles.navItem}
-                onClick={burger => this.toggleBurgerMenu(burger)}
+                onClick={burger => this.closBurgerMenu(burger)}
               >
                 Work
               </Link>
               <Link
                 to="/#skills"
                 className={styles.navItem}
-                onClick={burger => this.toggleBurgerMenu(burger)}
+                onClick={burger => this.closBurgerMenu(burger)}
               >
                 Skills
               </Link>
               <Link
                 to="/#about-me"
                 className={styles.navItem}
-                onClick={burger => this.toggleBurgerMenu(burger)}
+                onClick={burger => this.closBurgerMenu(burger)}
               >
                 About Me
               </Link>
@@ -87,7 +96,7 @@ class Header extends Component {
               <Button
                 link="/#form"
                 className={styles.navItem}
-                onClick={burger => this.toggleBurgerMenu(burger)}
+                onClick={burger => this.closBurgerMenu(burger)}
                 buttonType={
                   this.state.scrolled
                     ? "primary"
