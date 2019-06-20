@@ -15,7 +15,7 @@ class Header extends Component {
     }
   }
 
-  closBurgerMenu(burger) {
+  closeBurgerMenu(burger) {
     this.setState({ burgerOpen: false })
   }
 
@@ -46,7 +46,7 @@ class Header extends Component {
             <Link
               className={styles.navItem}
               to="/"
-              onClick={burger => this.closBurgerMenu(burger)}
+              onClick={burger => this.closeBurgerMenu(burger)}
             >
               <img src={Logo} alt="website logo" />
             </Link>
@@ -74,21 +74,21 @@ class Header extends Component {
               <Link
                 to="/#work"
                 className={styles.navItem}
-                onClick={burger => this.closBurgerMenu(burger)}
+                onClick={burger => this.closeBurgerMenu(burger)}
               >
                 Work
               </Link>
               <Link
                 to="/#skills"
                 className={styles.navItem}
-                onClick={burger => this.closBurgerMenu(burger)}
+                onClick={burger => this.closeBurgerMenu(burger)}
               >
                 Skills
               </Link>
               <Link
                 to="/#about-me"
                 className={styles.navItem}
-                onClick={burger => this.closBurgerMenu(burger)}
+                onClick={burger => this.closeBurgerMenu(burger)}
               >
                 About Me
               </Link>
@@ -96,7 +96,7 @@ class Header extends Component {
               <Button
                 link="/#form"
                 className={styles.navItem}
-                onClick={burger => this.closBurgerMenu(burger)}
+                onClick={burger => this.closeBurgerMenu(burger)}
                 buttonType={
                   this.state.scrolled
                     ? "primary"
