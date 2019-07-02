@@ -104,7 +104,7 @@ const DynamoPage = () => {
           <TextColumn>
             <h5>Building a Bespoke CRM System for Mortgages</h5>
             <p>
-              To ensure back-office efficiency and great customer service,we
+              To ensure back-office efficiency and great customer service, we
               created our own internal software that managed customer
               interactions and data throughout the customer lifecycle.
             </p>
