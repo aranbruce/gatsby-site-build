@@ -73,8 +73,8 @@ const DynamoPage = () => {
               A Web Application that Delivered a Seamless Mortgage Journey
             </h5>
             <p>
-              Dynamo’s ambition was to build a customer-facing digital fact find
-              that trasitioned smoothly into an advice call with a mortgage
+              Dynamo’s ambition was to build a customer-facing digital fact-find
+              that transitioned smoothly into an advice call with a mortgage
               expert. Information submitted by the customer would then be used
               to brief mortgage experts on a customer’s circumstances, helping
               them tailor the advice they gave.
