@@ -111,7 +111,7 @@ const DynamoPage = () => {
             <p>
               Our solution was tailored specifically to the mortgage process,
               with user permissions, case progression, and the information
-              architecture created to the ensure we could progress mortgage
+              architecture created to ensure we could progress mortgage
               applications quickly and compliantly.
             </p>
             <p>
