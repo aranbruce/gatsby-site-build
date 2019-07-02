@@ -119,7 +119,7 @@ const DynamoPage = () => {
               it came to prioritising and executing on opportunities to automate
               many areas of our processes. This resulted in our daily operations
               running more efficiently whilst ensuring our different departments
-              where all able to benefit from the results.
+              were all able to benefit from the results.
             </p>
           </TextColumn>
         </Section>
