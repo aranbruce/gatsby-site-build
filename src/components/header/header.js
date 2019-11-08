@@ -32,6 +32,7 @@ class Header extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
     window.addEventListener("burger toggle", this.toggleBurgerMenu)
+    this.handleScroll()
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll)

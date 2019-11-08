@@ -7,22 +7,22 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-favicon",
-      options: {
-        logo: "./src/images/favicon.png",
-        icons: {
-          android: false,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: false,
-          yandex: false,
-          windows: false,
-        },
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-favicon",
+    //   options: {
+    //     logo: "./src/images/favicon.png",
+    //     icons: {
+    //       android: false,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: false,
+    //       yandex: false,
+    //       windows: false,
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -32,7 +32,7 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#ffffff",
         display: "standalone",
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     {
